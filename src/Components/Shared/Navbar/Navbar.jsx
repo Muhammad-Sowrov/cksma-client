@@ -4,47 +4,37 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Divider from "@mui/material/Divider";
 import Drawer from "@mui/material/Drawer";
 import IconButton from "@mui/material/IconButton";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemButton from "@mui/material/ListItemButton";
-import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Button from "@mui/material/Button";
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const drawerWidth = 240;
-const navItems = ["Home", "About", "Donate", "Contact"];
-
-
 
 const Navbar = () => {
-    const [mobileOpen, setMobileOpen] = useState(false);
-  
-    const handleDrawerToggle = () => {
-      setMobileOpen((prevState) => !prevState);
-    };
-  
-    const drawer = (
-      <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-        <Typography variant="h6" sx={{ my: 2 }}>
-          Logo
-        </Typography>
-        <Divider />
-        <List>
-          {navItems.map((item) => (
-            <ListItem key={item} disablePadding>
-              <ListItemButton sx={{ textAlign: 'center' }}>
-                <ListItemText primary={item} />
-              </ListItemButton>
-            </ListItem>
-          ))}
-        </List>
-      </Box>
-    );
-    const container = typeof window !== 'undefined' ? window.document.body : undefined;
-    // const container = window !== undefined ? () => window().document.body : undefined;
+  const [mobileOpen, setMobileOpen] = useState(false);
+
+  const handleDrawerToggle = () => {
+    setMobileOpen((prevState) => !prevState);
+  };
+
+  const drawer = (
+    <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
+      <Typography variant="h6" sx={{ my: 2 }}>
+        Logo
+      </Typography>
+      <Divider />
+      <ul className="items-center p-2 ">
+        <li className="text-xl"><NavLink>Home</NavLink></li>
+        <li className="text-xl"><NavLink>About</NavLink></li>
+        <li className="text-xl"><NavLink>Donate</NavLink></li>
+        <li className="text-xl"><NavLink>Contact</NavLink></li>
+      </ul>
+    </Box>
+  );
+  const container =
+    typeof window !== "undefined" ? window.document.body : undefined;
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
@@ -67,11 +57,12 @@ const Navbar = () => {
             Logo
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
-            {navItems.map((item) => (
-              <Button key={item} sx={{ color: "#fff" }}>
-                {item}
-              </Button>
-            ))}
+            <ul className="flex gap-5">
+              <li><NavLink>Home</NavLink></li>
+              <li><NavLink>About</NavLink></li>
+              <li><NavLink>Donate</NavLink></li>
+              <li><NavLink>Contact</NavLink></li>
+            </ul>
           </Box>
         </Toolbar>
       </AppBar>
