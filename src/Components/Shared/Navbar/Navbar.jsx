@@ -26,10 +26,10 @@ const Navbar = () => {
       </Typography>
       <Divider />
       <ul className="items-center p-2 ">
-        <li className="text-xl"><NavLink>Home</NavLink></li>
-        <li className="text-xl"><NavLink>About</NavLink></li>
-        <li className="text-xl"><NavLink>Donate</NavLink></li>
-        <li className="text-xl"><NavLink>Contact</NavLink></li>
+        <li className="text-xl"><NavLink to="/">Home</NavLink></li>
+        <li className="text-xl"><NavLink to="about">About</NavLink></li>
+        <li className="text-xl"><NavLink to="donate">Donate</NavLink></li>
+        <li className="text-xl"><NavLink to="contact">Contact</NavLink></li>
       </ul>
     </Box>
   );
@@ -58,10 +58,10 @@ const Navbar = () => {
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <ul className="flex gap-5">
-              <li><NavLink>Home</NavLink></li>
-              <li><NavLink>About</NavLink></li>
-              <li><NavLink>Donate</NavLink></li>
-              <li><NavLink>Contact</NavLink></li>
+              <li><NavLink to="/">Home</NavLink></li>
+              <li><NavLink to="/about">About</NavLink></li>
+              <li><NavLink to="donate">Donate</NavLink></li>
+              <li><NavLink to="contact">Contact</NavLink></li>
             </ul>
           </Box>
         </Toolbar>
