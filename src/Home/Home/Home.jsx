@@ -1,9 +1,10 @@
-import Navbar from "../../Components/Shared/Navbar/Navbar";
+import Banner from "../Header/Banner/Banner";
+
 
 const Home = () => {
     return (
         <div>
-            <Navbar></Navbar>
+            <Banner></Banner>
         </div>
     );
 };
