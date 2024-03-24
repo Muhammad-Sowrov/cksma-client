@@ -1,4 +1,3 @@
-// import { useRef, useState } from 'react';
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css/scrollbar";
 import "swiper/css/navigation";
@@ -33,14 +32,14 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img className="h-[80vh] object-fill md:object-cover absolute" src="https://i.ibb.co/FqCcGTP/slider1-copy-3209x2407.jpg" />
+          <img className="h-[90vh] object-fill md:object-cover" src="https://i.ibb.co/FqCcGTP/slider1-copy-3209x2407.jpg" />
           {/* <div className="text-5xl relative right-96 top-56 border pl-8 pr-96 border-red-400 bottom-10">888</div> */}
         </SwiperSlide>
         <SwiperSlide>
-          <img className="h-[80vh] object-cover" src="https://i.ibb.co/nDdp5gX/slider2-copy-2539x1904.jpg" />
+          <img className="h-[90vh] object-cover" src="https://i.ibb.co/nDdp5gX/slider2-copy-2539x1904.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="h-[80vh] object-cover" src="https://i.ibb.co/tH95Z37/slider3-copy-2728x2046.jpg" />
+          <img className="h-[90vh] object-cover" src="https://i.ibb.co/tH95Z37/slider3-copy-2728x2046.jpg" />
         </SwiperSlide>
       </Swiper>
     </div>
@@ -48,3 +47,4 @@ const Banner = () => {
 };
 
 export default Banner;
+

@@ -25,11 +25,11 @@ const Navbar = () => {
         Logo
       </Typography>
       <Divider />
-      <ul className="items-center p-2 ">
-        <li className="text-xl"><NavLink to="/">Home</NavLink></li>
-        <li className="text-xl"><NavLink to="about">About</NavLink></li>
-        <li className="text-xl"><NavLink to="donate">Donate</NavLink></li>
-        <li className="text-xl"><NavLink to="contact">Contact</NavLink></li>
+      <ul className="items-center p-2">
+        <li className="text-xl font-bold"><NavLink to="/">Home</NavLink></li>
+        <li className="text-xl font-bold"><NavLink to="about">About</NavLink></li>
+        <li className="text-xl font-bold"><NavLink to="donate">Donate</NavLink></li>
+        <li className="text-xl font-bold"><NavLink to="contact">Contact</NavLink></li>
       </ul>
     </Box>
   );
@@ -86,9 +86,6 @@ const Navbar = () => {
           {drawer}
         </Drawer>
       </nav>
-      <Box component="main" sx={{ p: 3 }}>
-        <Toolbar />
-      </Box>
     </Box>
   );
 };
