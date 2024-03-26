@@ -8,7 +8,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import SchoolIcon from "@mui/icons-material/School";
 
 const drawerWidth = 240;
 
@@ -22,14 +23,22 @@ const Navbar = () => {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        Logo
+        <SchoolIcon></SchoolIcon>
       </Typography>
       <Divider />
       <ul className="items-center p-2">
-        <li className="text-xl font-bold"><NavLink to="/">Home</NavLink></li>
-        <li className="text-xl font-bold"><NavLink to="about">About</NavLink></li>
-        <li className="text-xl font-bold"><NavLink to="donate">Donate</NavLink></li>
-        <li className="text-xl font-bold"><NavLink to="contact">Contact</NavLink></li>
+        <li className="text-base">
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li className="text-base">
+          <NavLink to="about">About</NavLink>
+        </li>
+        <li className="text-base">
+          <NavLink to="donate">Donate</NavLink>
+        </li>
+        <li className="text-base">
+          <NavLink to="contact">Contact</NavLink>
+        </li>
       </ul>
     </Box>
   );
@@ -54,14 +63,24 @@ const Navbar = () => {
             component="div"
             sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
           >
-            Logo
+            <Link to="/">
+              <SchoolIcon></SchoolIcon>
+            </Link>
           </Typography>
           <Box sx={{ display: { xs: "none", sm: "block" } }}>
             <ul className="flex gap-5">
-              <li><NavLink to="/">Home</NavLink></li>
-              <li><NavLink to="/about">About</NavLink></li>
-              <li><NavLink to="donate">Donate</NavLink></li>
-              <li><NavLink to="contact">Contact</NavLink></li>
+              <li>
+                <NavLink to="/">Home</NavLink>
+              </li>
+              <li>
+                <NavLink to="/about">About</NavLink>
+              </li>
+              <li>
+                <NavLink to="donate">Donate</NavLink>
+              </li>
+              <li>
+                <NavLink to="contact">Contact</NavLink>
+              </li>
             </ul>
           </Box>
         </Toolbar>
